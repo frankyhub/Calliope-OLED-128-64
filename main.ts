@@ -1,0 +1,29 @@
+OLED12864_I2C.init(60)
+OLED12864_I2C.rect(
+0,
+0,
+62,
+30,
+1
+)
+basic.pause(100)
+basic.forever(function () {
+    OLED12864_I2C.showString(
+    1,
+    1,
+    "Temperatur:",
+    1
+    )
+    OLED12864_I2C.showNumber(
+    3,
+    2,
+    input.temperature(),
+    1
+    )
+    OLED12864_I2C.showString(
+    6,
+    2,
+    "Grad",
+    1
+    )
+})
